@@ -11,9 +11,6 @@ export const activate = (oni: Oni.Plugin.Api) => {
     //
     oni.input.bind("<c-enter>", () => console.log("Control+Enter was pressed"))
 
-    oni.input.bind("<d-}>", () => {
-        console.log("heyo");
-    })
     //
     // Or remove the default bindings here by uncommenting the below line:
     //
@@ -39,6 +36,10 @@ export const configuration = {
     // UI customizations
     "ui.animations.enabled": true,
     "ui.fontSmoothing": "auto",
-    "editor.fontFamily": "Source Code Pro",
-    "editor.fontSize": "13px"
+    "editor.fontFamily": "Source Code Pro for Powerline",
+    "editor.fontSize": "13px",
+    "terminal.shellCommand": "zsh",
+    "language.rust.languageServer.command": "rustup",
+    "language.rust.languageServer.arguments": ["run", "nightly", "rls"],
+    "language.rust.languageServer.rootFiles": ["Cargo.toml"]
 }
